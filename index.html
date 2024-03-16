@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/844de6ca70.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+               <img src="image/logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web developer</p>
+                <h1>Hi I am <br><span>Istiaq Ahmed </span></h1>
+            </div>
+        </div>
+    </div>
+    <!-------------about--------> 
+  <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="image/IMG_20221022_000018_056.jpg" >
+            </div>
+            <div class="about-col-2">
+                <h1
+                   class="sub-title" >About me</h1>
+                   <p>
+                    Students studying computer science at the Independent University of Bangladesh <br> 
+                    concentrate on Python, Java, and C/C++ programming languages. <br> 
+                    Algorithms, data structures, database management, networking, cybersecurity, <br>
+                     machine learning, artificial intelligence, web development, and operating systems  <br>
+                     concepts are among the things they study. This curriculum gives students the skills <br>
+                     they need to prepare for a variety of jobs in the computer sector.
+                </p>
+                <div class="tab-titels">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('Experence')">Experence</p>
+                    <p class="tab-links" onclick="opentab('Education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skillis">
+                    <ul>
+                        <li>
+                            <span>DATA Analysist</span><br>Work as a DATA Analysist 
+                        </li>
+                        <li>
+                            <span>WEB Development</span><br>Web developer
+                        </li>
+                        <li>
+                            <span>APP Development</span><br>APP developer
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Experence">
+                    <ul>
+                        <li>
+                            <span>2019-Current</span><br>studied at IUB
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Education">
+                    <ul>
+                        <li>
+                            <span>2019-Current</span><br>Studied at IUB
+                        </li>
+                        <li>
+                            <span>2017-2019</span><br>HSC from UHSC
+                        </li>
+                        <li>
+                            <span>2015-2017</span><br>SSC from UHSC
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!-------------contact----------->
+  <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p> <i class="fas fa-paper-plane"></i> istasif17@gmail.com</p>
+                <p> <i class="fas fa-phone"></i> 01611541295</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com/"><i class="fab fa-facebook"></i></a>
+                    <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/AsifTalukdar"><i class="fa-brands fa-github"></i></a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p> copyright &copy; Istiaq </p>
+    </div>
+  </div>
+  <script>
+
+    var tablinks =document.getElementsByClassName("tab-links");
+    var tabcontents =document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+  </script> 
+</body>
+</html>
